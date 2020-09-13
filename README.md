@@ -94,7 +94,7 @@ other categorical variable), furthermore we can observe that the distribution se
 different severity, so maybe light conditions may not be such an important variable to predicting
 accident severity
 
-![alt text](./3_Diagrams/light.png)
+![alt text](3_Diagrams/light.png)
 
 ## Prediction Model
 
