@@ -65,7 +65,7 @@ on land.
 Plotting stacked barplot of accident severity by month, we are able to observe a slight seasonality
 trend though not super obvious.
 
-![alt text](./3_Diagrams/Accident_Severity_by_month.png)
+![alt text](./3_Diagrams/month.png)
 
 We can observe that winter period shows a higher number of accidents which make sense as snow
 and reduced visibility can cause accidents to occur more frequently. Though from the graph, it
