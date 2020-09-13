@@ -45,3 +45,19 @@ just to analysis accident information that occurred in the Great Britain in 2005
 | `Speed limit` | The speed limit where the accident occured  |
 | `Urban or Rural Area` | Did the accident occur in urban or rural setting |
 | `Weather Conditions` | The weather condition when the accident occured  |
+
+## Exploratory Data Analysis
+
+### Geographic Visualization of Accidents in UK
+Overlaying the geo-coordinates of accidents with the map, we are able to create a visualization of
+the location of the accidents. 
+
+![alt text](./3_Diagrmas/Uk_Accident Graph.png)
+
+We are able to observe some clustering of accidents in major cities,
+and that there seems to be more severity of accidents that occur in rural but hard to tell just from
+map. It is interesting to note that there seems to be some accidents that occur in the sea, this may be
+due to rounding of the geo-location data or mapping data not 100% accurate. But maybe also
+some accidents occured where the car drove off into the sea, and that why marked as occured not
+on land.
+
