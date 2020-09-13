@@ -52,7 +52,7 @@ just to analysis accident information that occurred in the Great Britain in 2005
 Overlaying the geo-coordinates of accidents with the map, we are able to create a visualization of
 the location of the accidents. 
 
-![alt text](3_Diagrams/Uk_Accident Graph.PNG)
+![image](./3_Diagrams/Uk_Accident_Graph.PNG)
 
 We are able to observe some clustering of accidents in major cities,
 and that there seems to be more severity of accidents that occur in rural but hard to tell just from
@@ -65,7 +65,7 @@ on land.
 Plotting stacked barplot of accident severity by month, we are able to observe a slight seasonality
 trend though not super obvious.
 
-![alt text](./3_Diagrams/Accident Severity by month.png)
+![alt text](./3_Diagrams/Accident_Severity_by_month.png)
 
 We can observe that winter period shows a higher number of accidents which make sense as snow
 and reduced visibility can cause accidents to occur more frequently. Though from the graph, it
@@ -75,7 +75,7 @@ seems that accident severity seems to be quite evenly distributed across the mon
 Accident tend to occur more frequently in the weekend + Friday; while decreasing from monday
 to wednesday
 
-![alt text](./3_Diagrams/Accident Severity by weekday.png)
+![alt text](./3_Diagrams/Accident_Severity_by_weekday.png)
 
 Distribution of accident severity tends to follow the trend of the number of accidents (nothing to
 interesting to note)
