@@ -126,8 +126,8 @@ We observe that the only model that is overfitting the model is KNN while the ot
 ## Implication of the prediction model
 
 Going back to our introduction, the objective is to explore the potential usage of machine learning in the car insurance claims. This model can help in two ways:
-1) Insurance Claim - Predict accident severity to help decided the amount/rate of the compensation
-2) Fraud Claim - Check whether exaggerated in filling and help decided whether to conduct fraud investigation or not.
+1. Insurance Claim - Predict accident severity to help decided the amount/rate of the compensation
+2. Fraud Claim - Check whether exaggerated in filling and help decided whether to conduct fraud investigation or not.
 
 ## Future Improvements
 
