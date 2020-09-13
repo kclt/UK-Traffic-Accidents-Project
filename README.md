@@ -83,6 +83,7 @@ interesting to note)
 ### Rural vs Urban Traffic Accident Casualities and Severity
 
 ![alt text](./3_Diagrams/rural.png)
+
 It is interesting to observe that there seems to be an different in city type and accident severity. As
 from the below scatter plot, we are able to see that on Urban cluster tend to have a lower average
 severity and lower number of casualities. While on the other hand rural area tend to have a more
@@ -98,12 +99,43 @@ accident severity
 
 ## Prediction Model
 
-We created a prediction model that 
+We first removed non-contextual variables such as date, longitude, lantitude variables to create dataset suitable for model prediction. Then as seen with our EDA that most of our categorial variable are quite cardinal thus we perform SMOTE(Synthetic Minority Over Sampling Technique) transformation to the data set to attempt to decrease the bias created by skewed dataset. 
 
-Model used 
-Ensemble model
+Then using 90% of the data as training and 10% as testing we train (10 folds cross validation and parameters tuning with grid search) various model with training dataset. The following table summarize the various algorithm and its accuracy score with the testing data. 
 
+ | Algorithm | Score |
+| --- | --- |
+| OvA(Perceptron) | 0.82 |
+| OvA(Logistic Regression) | 0.87 |
+| Neural Neet | 0.88 |
+| Nearest Neighbor | 0.86 |
+| Linear SVM | 0.1 |
+
+![alt text](3_Diagrams/roc.png)
+
+As Linear SVM has a low score we remove it for the analysis as it would not be helpful for the ensemble model.
+
+Taking a closer look at the learning curve of each model
+
+![alt text](3_Diagrams/validcurve.png)
+
+We observe that the only model that is overfitting the model is KNN while the other looks quite good. Then using the an ensemble learning model (e.g. combine the various model to conduct majority voting) we arrive at the following results.
+
+![alt text](3_Diagrams/results.png)
+
+## Implication of the prediction model
+
+Going back to our introduction, the objective is to explore the potential usage of machine learning in the car insurance claims. This model can help in two ways:
+1) Insurance Claim - Predict accident severity to help decided the amount/rate of the compensation
+2) Fraud Claim - Check whether exaggerated in filling and help decided whether to conduct fraud investigation or not.
 
 ## Future Improvements
+
+- To build a model with weighting of information 
+- The model may have difficulty classifying serious accidents due to highly skewed dataset
+- The model requires all completed data, while in reality this is often not the case 
+- Choose our datasets over a longer time span
+- Accident prone zone and cause of fatal accidents may change over time
+
 
 
