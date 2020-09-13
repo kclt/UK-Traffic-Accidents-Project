@@ -52,7 +52,7 @@ just to analysis accident information that occurred in the Great Britain in 2005
 Overlaying the geo-coordinates of accidents with the map, we are able to create a visualization of
 the location of the accidents. 
 
-![alt text](./3_Diagrams/Uk_Accident Graph.PNG)
+![alt text](3_Diagrams/Uk_Accident Graph.PNG)
 
 We are able to observe some clustering of accidents in major cities,
 and that there seems to be more severity of accidents that occur in rural but hard to tell just from
