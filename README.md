@@ -52,7 +52,7 @@ just to analysis accident information that occurred in the Great Britain in 2005
 Overlaying the geo-coordinates of accidents with the map, we are able to create a visualization of
 the location of the accidents. 
 
-![alt text](./3_Diagrmas/Uk_Accident Graph.png)
+![alt text](./3_Diagrams/Uk_Accident Graph.PNG)
 
 We are able to observe some clustering of accidents in major cities,
 and that there seems to be more severity of accidents that occur in rural but hard to tell just from
@@ -60,4 +60,50 @@ map. It is interesting to note that there seems to be some accidents that occur 
 due to rounding of the geo-location data or mapping data not 100% accurate. But maybe also
 some accidents occured where the car drove off into the sea, and that why marked as occured not
 on land.
+
+### Accident Severity by Month
+Plotting stacked barplot of accident severity by month, we are able to observe a slight seasonality
+trend though not super obvious.
+
+![alt text](./3_Diagrams/Accident Severity by month.png)
+
+We can observe that winter period shows a higher number of accidents which make sense as snow
+and reduced visibility can cause accidents to occur more frequently. Though from the graph, it
+seems that accident severity seems to be quite evenly distributed across the month.
+
+### Accident Severity by Day of the Week
+Accident tend to occur more frequently in the weekend + Friday; while decreasing from monday
+to wednesday
+
+![alt text](./3_Diagrams/Accident Severity by weekday.png)
+
+Distribution of accident severity tends to follow the trend of the number of accidents (nothing to
+interesting to note)
+
+### Rural vs Urban Traffic Accident Casualities and Severity
+
+![alt text](./3_Diagrams/rural.png)
+It is interesting to observe that there seems to be an different in city type and accident severity. As
+from the below scatter plot, we are able to see that on Urban cluster tend to have a lower average
+severity and lower number of casualities. While on the other hand rural area tend to have a more
+seperated cluster, where we see an increasing trend of severity and casualities!
+
+### Accident Severity and Light Conditions
+Light condition distribution are quite cardinal (which seem to be the like the case for a lot of our
+other categorical variable), furthermore we can observe that the distribution seem to follow for the
+different severity, so maybe light conditions may not be such an important variable to predicting
+accident severity
+
+![alt text](./3_Diagrams/light.png)
+
+## Prediction Model
+
+We created a prediction model that 
+
+Model used 
+Ensemble model
+
+
+## Future Improvements
+
 
