@@ -1,5 +1,5 @@
 # UK Traffic Accidents 2005 
-Exploring the a use case of machine learning on UK Traffic Accident data set to classify accident severity
+Exploring a use case of machine learning on UK Traffic Accident data set to classify accident severity
 
 ## Introduction
 Historically, accidents insurance plans and payments are calculated using actuarial models. Now
@@ -12,7 +12,7 @@ The target variable is thus accident severity which comes in 3 level:
 2. Serious
 3. Fatal
 
-Thus we are dealing with a multi-class classification problem/analysis.
+Thus, we are dealing with a multi-class classification problem/analysis.
 
 Using this prediction results, we can help insurance companies to:
 1. Evaluate insurance claims payment
@@ -41,10 +41,10 @@ just to analysis accident information that occurred in the Great Britain in 2005
 | `Number of Casualties:` | The number of causalities involved in accident |
 | `Number of Vehicles:` | The number of vehicles involved in accident |
 | `Road Surface Conditions` | The condition of the road during the accident  |
-| `Road Type` | The road type where the accident occured (e.g.one way street)  |
-| `Speed limit` | The speed limit where the accident occured  |
+| `Road Type` | The road type where the accident occurred (e.g.one way street)  |
+| `Speed limit` | The speed limit where the accident occurred  |
 | `Urban or Rural Area` | Did the accident occur in urban or rural setting |
-| `Weather Conditions` | The weather condition when the accident occured  |
+| `Weather Conditions` | The weather condition when the accident occurred  |
 
 ## Exploratory Data Analysis
 
@@ -58,11 +58,11 @@ We are able to observe some clustering of accidents in major cities,
 and that there seems to be more severity of accidents that occur in rural but hard to tell just from
 map. It is interesting to note that there seems to be some accidents that occur in the sea, this may be
 due to rounding of the geo-location data or mapping data not 100% accurate. But maybe also
-some accidents occured where the car drove off into the sea, and that why marked as occured not
+some accidents occurred where the car drove off into the sea, and that why marked as occurred not
 on land.
 
 ### Accident Severity by Month
-Plotting stacked barplot of accident severity by month, we are able to observe a slight seasonality
+Plotting stacked bar plot of accident severity by month, we can observe a slight seasonality
 trend though not super obvious.
 
 ![alt text](./3_Diagrams/month.png)
@@ -72,26 +72,26 @@ and reduced visibility can cause accidents to occur more frequently. Though from
 seems that accident severity seems to be quite evenly distributed across the month.
 
 ### Accident Severity by Day of the Week
-Accident tend to occur more frequently in the weekend + Friday; while decreasing from monday
-to wednesday
+Accident tend to occur more frequently in the weekend + Friday; while decreasing from Monday
+to Wednesday
 
 ![alt text](./3_Diagrams/Accident_Severity_by_weekday.png)
 
 Distribution of accident severity tends to follow the trend of the number of accidents (nothing to
 interesting to note)
 
-### Rural vs Urban Traffic Accident Casualities and Severity
+### Rural vs Urban Traffic Accident Causalities and Severity
 
 ![alt text](./3_Diagrams/rural.png)
 
 It is interesting to observe that there seems to be an different in city type and accident severity. As
 from the below scatter plot, we are able to see that on Urban cluster tend to have a lower average
-severity and lower number of casualities. While on the other hand rural area tend to have a more
-seperated cluster, where we see an increasing trend of severity and casualities!
+severity and lower number of causalities. While on the other hand rural area tend to have a more
+separated cluster, where we see an increasing trend of severity and causalities!
 
 ### Accident Severity and Light Conditions
 Light condition distribution are quite cardinal (which seem to be the like the case for a lot of our
-other categorical variable), furthermore we can observe that the distribution seem to follow for the
+other categorical variable), furthermore we can observe that the distribution seems to follow for the
 different severity, so maybe light conditions may not be such an important variable to predicting
 accident severity
 
@@ -99,7 +99,7 @@ accident severity
 
 ## Prediction Model
 
-We first removed non-contextual variables such as date, longitude, lantitude variables to create dataset suitable for model prediction. Then as seen with our EDA that most of our categorial variable are quite cardinal thus we perform SMOTE(Synthetic Minority Over Sampling Technique) transformation to the data set to attempt to decrease the bias created by skewed dataset. 
+We first removed non-contextual variables such as date, longitude, latitude variables to create dataset suitable for model prediction. Then as seen with our EDA that most of our categorial variable are quite cardinal thus we perform SMOTE(Synthetic Minority Over Sampling Technique) transformation to the data set to attempt to decrease the bias created by skewed dataset. 
 
 Then using 90% of the data as training and 10% as testing we train (10 folds cross validation and parameters tuning with grid search) various model with training dataset. The following table summarize the various algorithm and its accuracy score with the testing data. 
 
@@ -119,7 +119,7 @@ Taking a closer look at the learning curve of each model
 
 ![alt text](3_Diagrams/validcurve.png)
 
-We observe that the only model that is overfitting the model is KNN while the other looks quite good. Then using the an ensemble learning model (e.g. combine the various model to conduct majority voting) we arrive at the following results.
+We observe that the only model that is overfitting the model is KNN while the other looks quite good. Then using an ensemble learning model (e.g. combine the various model to conduct majority voting) we arrive at the following results.
 
 ![alt text](3_Diagrams/results.png)
 
@@ -133,7 +133,7 @@ Going back to our introduction, the objective is to explore the potential usage 
 
 - To build a model with weighting of information 
 - The model may have difficulty classifying serious accidents due to highly skewed dataset
-- The model requires all completed data, while in reality this is often not the case 
+- The model requires all completed data, while this is often not the case 
 - Choose our datasets over a longer time span
 - Accident prone zone and cause of fatal accidents may change over time
 
